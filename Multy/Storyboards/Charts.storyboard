@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Common Charts View Controller-->
+        <scene sceneID="mTk-Mb-cJX">
+            <objects>
+                <viewController storyboardIdentifier="CommonChartsID" id="JDN-0v-Mk3" customClass="CommonChartsViewController" customModule="Multy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HU2-8S-dGc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bBq-FT-K1K">
+                                <rect key="frame" x="37" y="250" width="301" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Today"/>
+                                    <segment title="1W"/>
+                                    <segment title="1M"/>
+                                    <segment title="3M"/>
+                                    <segment title="6M"/>
+                                    <segment title="Year"/>
+                                    <segment title="All"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="ratesRangeSegmentedControlValueChanged:" destination="JDN-0v-Mk3" eventType="valueChanged" id="1V5-UC-Fg8"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RtP-KK-R38" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="286" width="375" height="291"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hso-zo-8b5">
+                                        <rect key="frame" x="177" y="135" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="291" id="Ion-cw-Lpa"/>
+                                    <constraint firstItem="Hso-zo-8b5" firstAttribute="centerX" secondItem="RtP-KK-R38" secondAttribute="centerX" id="JEK-0A-pem"/>
+                                    <constraint firstItem="Hso-zo-8b5" firstAttribute="centerY" secondItem="RtP-KK-R38" secondAttribute="centerY" id="hQc-X6-Rpj"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbu-dS-Znh">
+                                <rect key="frame" x="156.5" y="585" width="62" height="62"/>
+                                <state key="normal" image="closeBtn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeAction:" destination="JDN-0v-Mk3" eventType="touchUpInside" id="tct-Qh-uRA"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wIe-XY-hKj">
+                                <rect key="frame" x="16" y="40" width="343" height="202"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="LbZ-yb-vwk">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="JDN-0v-Mk3" id="XQE-4y-AX5"/>
+                                    <outlet property="delegate" destination="JDN-0v-Mk3" id="Y7w-AP-Yc6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.51372549019607838" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="xbu-dS-Znh" secondAttribute="bottom" constant="20" id="2NE-md-0Ic"/>
+                            <constraint firstItem="xbu-dS-Znh" firstAttribute="centerX" secondItem="HU2-8S-dGc" secondAttribute="centerX" id="Aol-0w-3gS"/>
+                            <constraint firstItem="wIe-XY-hKj" firstAttribute="top" secondItem="2ME-31-64d" secondAttribute="top" constant="20" id="Arx-ac-Hae"/>
+                            <constraint firstItem="RtP-KK-R38" firstAttribute="top" secondItem="bBq-FT-K1K" secondAttribute="bottom" constant="8" id="OY3-pB-anH"/>
+                            <constraint firstAttribute="trailing" secondItem="bBq-FT-K1K" secondAttribute="trailing" constant="37" id="X5M-xV-apq"/>
+                            <constraint firstItem="bBq-FT-K1K" firstAttribute="leading" secondItem="HU2-8S-dGc" secondAttribute="leading" constant="37" id="ZPe-i7-AIF"/>
+                            <constraint firstItem="bBq-FT-K1K" firstAttribute="top" secondItem="wIe-XY-hKj" secondAttribute="bottom" constant="8" id="axz-lD-DhX"/>
+                            <constraint firstItem="xbu-dS-Znh" firstAttribute="top" secondItem="RtP-KK-R38" secondAttribute="bottom" constant="8" id="csb-Tj-kIh"/>
+                            <constraint firstItem="wIe-XY-hKj" firstAttribute="leading" secondItem="HU2-8S-dGc" secondAttribute="leading" constant="16" id="fMp-nr-SyM"/>
+                            <constraint firstAttribute="trailing" secondItem="wIe-XY-hKj" secondAttribute="trailing" constant="16" id="jq8-K4-Ph8"/>
+                            <constraint firstItem="RtP-KK-R38" firstAttribute="trailing" secondItem="HU2-8S-dGc" secondAttribute="trailing" id="l3D-Cf-bm9"/>
+                            <constraint firstItem="RtP-KK-R38" firstAttribute="leading" secondItem="HU2-8S-dGc" secondAttribute="leading" id="zGw-Ug-vwR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2ME-31-64d"/>
+                    </view>
+                    <connections>
+                        <outlet property="chartDataLoader" destination="Hso-zo-8b5" id="U6F-9C-Pc8"/>
+                        <outlet property="chartView" destination="RtP-KK-R38" id="e5E-e6-F4i"/>
+                        <outlet property="currenciesCollectionView" destination="wIe-XY-hKj" id="cqV-G1-YnH"/>
+                        <outlet property="ratesRangeSegmentedControl" destination="bBq-FT-K1K" id="H6Z-aF-Z6h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8d-x0-7Z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="41.829085457271368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="closeBtn" width="62" height="62"/>
+    </resources>
+</document>

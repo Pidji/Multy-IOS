@@ -238,6 +238,12 @@
 		85DE62E920AC1CE100423D89 /* ActiveRequestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85DE62E720AC1CE100423D89 /* ActiveRequestCollectionViewCell.xib */; };
 		85DE62ED20AC4E4C00423D89 /* PaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DE62EC20AC4E4C00423D89 /* PaymentRequest.swift */; };
 		85DE62F320AF188B00423D89 /* Check Mark Success Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 85DE62F220AF188B00423D89 /* Check Mark Success Data.json */; };
+		85F40ED220D16B8400FA05C7 /* CommonChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F40ED120D16B8400FA05C7 /* CommonChartsViewController.swift */; };
+		85F40ED420D16B9600FA05C7 /* CommonChartsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F40ED320D16B9600FA05C7 /* CommonChartsPresenter.swift */; };
+		85F40ED620D16BC900FA05C7 /* Charts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85F40ED520D16BC900FA05C7 /* Charts.storyboard */; };
+		85F40EDE20D2A88700FA05C7 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F40EDD20D2A88700FA05C7 /* DateValueFormatter.swift */; };
+		85F40EE320D2CBE100FA05C7 /* CurrencyRateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F40EE220D2CBE100FA05C7 /* CurrencyRateCollectionViewCell.swift */; };
+		85F40EE520D2CBF200FA05C7 /* CurrencyRateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F40EE420D2CBF200FA05C7 /* CurrencyRateCollectionViewCell.xib */; };
 		BA3449F966752EDDC53A2B0D /* Pods_Multy_MultyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572DB9D15F9362827245CF67 /* Pods_Multy_MultyUITests.framework */; };
 		FA0B618D1FEBC1DD00ED0CE6 /* RecentAddressesRLM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B618C1FEBC1DD00ED0CE6 /* RecentAddressesRLM.swift */; };
 		FA4125DF2004C0FD00DF9AC3 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4125DE2004C0FD00DF9AC3 /* libstdc++.tbd */; };
@@ -644,6 +650,12 @@
 		85DE62E720AC1CE100423D89 /* ActiveRequestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActiveRequestCollectionViewCell.xib; sourceTree = "<group>"; };
 		85DE62EC20AC4E4C00423D89 /* PaymentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentRequest.swift; sourceTree = "<group>"; };
 		85DE62F220AF188B00423D89 /* Check Mark Success Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Check Mark Success Data.json"; sourceTree = "<group>"; };
+		85F40ED120D16B8400FA05C7 /* CommonChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonChartsViewController.swift; sourceTree = "<group>"; };
+		85F40ED320D16B9600FA05C7 /* CommonChartsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonChartsPresenter.swift; sourceTree = "<group>"; };
+		85F40ED520D16BC900FA05C7 /* Charts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Charts.storyboard; sourceTree = "<group>"; };
+		85F40EDD20D2A88700FA05C7 /* DateValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		85F40EE220D2CBE100FA05C7 /* CurrencyRateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRateCollectionViewCell.swift; sourceTree = "<group>"; };
+		85F40EE420D2CBF200FA05C7 /* CurrencyRateCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyRateCollectionViewCell.xib; sourceTree = "<group>"; };
 		B0FFD5D1BF6159BB241CBFF9 /* Pods_MultyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F4E06236FA82100FA1DF80 /* Pods-Multy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Multy/Pods-Multy.release.xcconfig"; sourceTree = "<group>"; };
 		F845D6707FC4D00A317BC418 /* Pods-Multy-MultyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Multy-MultyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Multy-MultyUITests/Pods-Multy-MultyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1144,6 +1156,7 @@
 				44CD6B8E208B5018009C07F6 /* BigInt.swift */,
 				854C748A20C56C6900CBAFE9 /* Utilities.swift */,
 				4448DCC620C8333100CE80CB /* LocalLanguage.swift */,
+				85F40EDD20D2A88700FA05C7 /* DateValueFormatter.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1458,6 +1471,7 @@
 				445B127820BC1BD000FD0D33 /* Wallet.storyboard */,
 				445B127B20BC1BD900FD0D33 /* Send.storyboard */,
 				445B127E20BC1BE000FD0D33 /* Settings.storyboard */,
+				85F40ED520D16BC900FA05C7 /* Charts.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -1465,6 +1479,7 @@
 		45B9CB031FBB4B2300AA2A31 /* ViewControllers and Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				85F40ECF20D1632800FA05C7 /* Charts */,
 				45B9CB011FBB4AC200AA2A31 /* Assets */,
 				455EA8721FD841FF0093F69D /* TabBar */,
 				FA4D43E81FC5C305003C7117 /* Wallet */,
@@ -1480,6 +1495,7 @@
 		45B9CB041FBB4B6600AA2A31 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				85F40EDF20D2CB8900FA05C7 /* CurrencyRateCVC */,
 				85DE62E520AC1CD000423D89 /* ActiveRequestCVC */,
 				85DE62E020AB074100423D89 /* WalletCVC */,
 				45DCF9CA1FE13991005A9896 /* AddressCell */,
@@ -1668,6 +1684,32 @@
 				85DE62F220AF188B00423D89 /* Check Mark Success Data.json */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		85F40ECF20D1632800FA05C7 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				85F40ED020D16B6E00FA05C7 /* CommonCharts */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		85F40ED020D16B6E00FA05C7 /* CommonCharts */ = {
+			isa = PBXGroup;
+			children = (
+				85F40ED120D16B8400FA05C7 /* CommonChartsViewController.swift */,
+				85F40ED320D16B9600FA05C7 /* CommonChartsPresenter.swift */,
+			);
+			path = CommonCharts;
+			sourceTree = "<group>";
+		};
+		85F40EDF20D2CB8900FA05C7 /* CurrencyRateCVC */ = {
+			isa = PBXGroup;
+			children = (
+				85F40EE220D2CBE100FA05C7 /* CurrencyRateCollectionViewCell.swift */,
+				85F40EE420D2CBF200FA05C7 /* CurrencyRateCollectionViewCell.xib */,
+			);
+			path = CurrencyRateCVC;
 			sourceTree = "<group>";
 		};
 		8F3AE4440B3A342D5B1B0AB7 /* Pods */ = {
@@ -2011,8 +2053,10 @@
 				4477264220BEC818006BF4A7 /* Receives.strings in Resources */,
 				4522905A1FBB18D30024B550 /* Main.storyboard in Resources */,
 				445B127C20BC1BE000FD0D33 /* Settings.storyboard in Resources */,
+				85F40EE520D2CBF200FA05C7 /* CurrencyRateCollectionViewCell.xib in Resources */,
 				445B129720BC1CEE00FD0D33 /* CustomTrasanctionFeeTableViewCell.xib in Resources */,
 				445B127020BC1BA800FD0D33 /* SeedPhrase.storyboard in Resources */,
+				85F40ED620D16BC900FA05C7 /* Charts.storyboard in Resources */,
 				4477262420BE9F53006BF4A7 /* NewWalletTableViewCell.xib in Resources */,
 				445B12E020BD78D000FD0D33 /* CurrencyChooser.strings in Resources */,
 				45EBB6A8200D312700F81322 /* GoogleService-Info.plist in Resources */,
@@ -2111,6 +2155,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Branch/Branch.framework",
 				"${BUILT_PRODUCTS_DIR}/ButtonProgressBar-iOS/ButtonProgressBar_iOS.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.framework",
@@ -2137,6 +2182,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Branch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ButtonProgressBar_iOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDZSwiftCommonCrypto.framework",
@@ -2191,6 +2237,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Branch/Branch.framework",
 				"${BUILT_PRODUCTS_DIR}/ButtonProgressBar-iOS/ButtonProgressBar_iOS.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IDZSwiftCommonCrypto/IDZSwiftCommonCrypto.framework",
@@ -2215,6 +2262,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Branch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ButtonProgressBar_iOS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDZSwiftCommonCrypto.framework",
@@ -2349,6 +2397,7 @@
 				45E148A8204553AF006BD4D1 /* DonationAlertViewController.swift in Sources */,
 				455CDCEF1FC833A500EA5ACE /* SendingAnimationViewController.swift in Sources */,
 				44FB26C0205A6D5600F208EB /* ChooseBlockchainProtocol.swift in Sources */,
+				85F40EE320D2CBE100FA05C7 /* CurrencyRateCollectionViewCell.swift in Sources */,
 				45F42C841FDC081400210B1F /* IsJailbroken.swift in Sources */,
 				455CDCF11FC833C700EA5ACE /* SendingAnimationPresenter.swift in Sources */,
 				458C8B0220724B2D00B8D71B /* UIScrollView+Extension.swift in Sources */,
@@ -2368,6 +2417,7 @@
 				4583ACA31FBCAC60001991AA /* UIView+Extension.swift in Sources */,
 				44DFEF9F206A51AF0068769C /* UInt64+Extension.swift in Sources */,
 				455CDCFB1FC8537200EA5ACE /* CreateWalletViewController.swift in Sources */,
+				85F40ED220D16B8400FA05C7 /* CommonChartsViewController.swift in Sources */,
 				455CDCFD1FC85BB700EA5ACE /* CreateWalletNameTableViewCell.swift in Sources */,
 				451ED791207CBCDF00542F00 /* PrivateKeyPresenter.swift in Sources */,
 				455CDCF91FC8535C00EA5ACE /* CreateWalletPresenter.swift in Sources */,
@@ -2386,6 +2436,7 @@
 				4522361F1FCD6B94004BA490 /* TransactionViewController.swift in Sources */,
 				45AC16282048214C00E75BD6 /* CurrencyTableViewCell.swift in Sources */,
 				45D4D16D205C1DC7008B1F0B /* EthWalletViewController.swift in Sources */,
+				85F40ED420D16B9600FA05C7 /* CommonChartsPresenter.swift in Sources */,
 				FA8C87872010E59200F8D5D9 /* OpenCreatingSheet.swift in Sources */,
 				FACEB5A1200A46F600055788 /* TransactionPendingCell.swift in Sources */,
 				4585BD342049A93C004542AE /* ExchangeStocksPresenter.swift in Sources */,
@@ -2402,6 +2453,7 @@
 				45B0B0EB1FEBF2BB005BB1C0 /* ContactsPresenter.swift in Sources */,
 				85741D8720B555DB0093933B /* BLEManager.swift in Sources */,
 				44BCBDB720601AE3001611A5 /* ETHWallet.swift in Sources */,
+				85F40EDE20D2A88700FA05C7 /* DateValueFormatter.swift in Sources */,
 				45A949531FC6D1E1003C3A23 /* TransactionFeeTableViewCell.swift in Sources */,
 				FA869D121FD6C17900C815C3 /* ExchangePriceRLM.swift in Sources */,
 				457569461FBDDD0F00FDEE20 /* CheckWordsPresenter.swift in Sources */,

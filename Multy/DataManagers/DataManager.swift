@@ -84,4 +84,10 @@ class DataManager: NSObject {
         
         return ("\(currencyString)" + "\(walletString) +\(networkString)").sha3(.sha256)
     }
+    
+    func allCurreniesList() -> [CurrencyObj] {
+        let btc = CurrencyObj.createCurrencyObj(blockchain: BlockchainType(blockchain: BLOCKCHAIN_BITCOIN, net_type: Int(BITCOIN_NET_TYPE_MAINNET.rawValue)))
+        let eth = CurrencyObj.createCurrencyObj(blockchain: BlockchainType(blockchain: BLOCKCHAIN_ETHEREUM, net_type: Int(ETHEREUM_CHAIN_ID_MAINNET.rawValue)))
+        return [btc, eth]
+    }
 }

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2OQ-wa-WUX" customClass="CurrencyRateCollectionViewCell" customModule="Multy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HAu-Nl-6gP">
+                        <rect key="frame" x="8" y="8" width="359" height="84"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ksp-ho-bRt" userLabel="Image View - Icon">
+                                <rect key="frame" x="16" y="25.5" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="dcL-ag-TQK"/>
+                                    <constraint firstAttribute="height" constant="33" id="xCC-fb-5D8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEh-en-16I" userLabel="Label - Symbol">
+                                <rect key="frame" x="57" y="30" width="34" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8500.09 $" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wum-9K-vkE" userLabel="Label - Rate">
+                                <rect key="frame" x="246.5" y="29" width="96.5" height="26"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                <color key="textColor" red="0.15294117647058825" green="0.68235294117647061" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wum-9K-vkE" firstAttribute="centerY" secondItem="HAu-Nl-6gP" secondAttribute="centerY" id="HOk-NO-ywR"/>
+                            <constraint firstAttribute="trailing" secondItem="Wum-9K-vkE" secondAttribute="trailing" constant="16" id="Ixq-om-XqU"/>
+                            <constraint firstItem="Ksp-ho-bRt" firstAttribute="centerY" secondItem="HAu-Nl-6gP" secondAttribute="centerY" id="XIA-Il-Djk"/>
+                            <constraint firstItem="Ksp-ho-bRt" firstAttribute="leading" secondItem="HAu-Nl-6gP" secondAttribute="leading" constant="16" id="ZKd-aJ-W6s"/>
+                            <constraint firstItem="CEh-en-16I" firstAttribute="centerY" secondItem="HAu-Nl-6gP" secondAttribute="centerY" id="eKO-l1-mDa"/>
+                            <constraint firstItem="CEh-en-16I" firstAttribute="leading" secondItem="Ksp-ho-bRt" secondAttribute="trailing" constant="8" id="kUG-Vr-j0O"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounce" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HAu-Nl-6gP" secondAttribute="bottom" constant="8" id="1BU-oD-VBQ"/>
+                <constraint firstAttribute="trailing" secondItem="HAu-Nl-6gP" secondAttribute="trailing" constant="8" id="MRJ-me-Cje"/>
+                <constraint firstItem="HAu-Nl-6gP" firstAttribute="top" secondItem="2OQ-wa-WUX" secondAttribute="top" constant="8" id="Ojb-pI-V5P"/>
+                <constraint firstItem="HAu-Nl-6gP" firstAttribute="leading" secondItem="2OQ-wa-WUX" secondAttribute="leading" constant="8" id="ebf-IX-oUw"/>
+            </constraints>
+            <size key="customSize" width="528" height="169"/>
+            <connections>
+                <outlet property="holderView" destination="HAu-Nl-6gP" id="Ih1-TJ-54h"/>
+                <outlet property="iconImageView" destination="Ksp-ho-bRt" id="zmg-pG-LB5"/>
+                <outlet property="rateLabel" destination="Wum-9K-vkE" id="Vhk-lA-EP6"/>
+                <outlet property="symbolLabel" destination="CEh-en-16I" id="zkM-ar-hYY"/>
+            </connections>
+            <point key="canvasLocation" x="-81.5" y="54"/>
+        </collectionViewCell>
+    </objects>
+</document>

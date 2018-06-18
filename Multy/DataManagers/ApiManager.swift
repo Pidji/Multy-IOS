@@ -436,12 +436,12 @@ class ApiManager: NSObject, RequestRetrier {
         }
     }
     
-    func getRates(currencyID: NSNumber, referenceID: NSNumber, tsFrom: TimeInterval, tsTo: TimeInterval, completion: @escaping(_ answer: NSDictionary?,_ error: Error?) -> ()) {
+    func getRates(currencyIDs: [NSNumber], referenceID: NSNumber, tsFrom: TimeInterval?, tsTo: TimeInterval, completion: @escaping(_ answer: NSDictionary?,_ error: Error?) -> ()) {
         let header: HTTPHeaders = [
             "Authorization" : "Bearer \(self.token)"
         ]
         //FIXME: Change url
-        requestManager.request("\(apiUrl)api/v1/address/balance/\(currencyID)/\(referenceID)/\(tsFrom)/\(tsTo)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).validate().debugLog().responseJSON { (response: DataResponse<Any>) in
+        requestManager.request("\(apiUrl)api/v1/address/balance/\(currencyIDs)/\(referenceID)/\(tsFrom)/\(tsTo)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: header).validate().debugLog().responseJSON { (response: DataResponse<Any>) in
             switch response.result {
             case .success(_):
                 if response.result.value != nil {

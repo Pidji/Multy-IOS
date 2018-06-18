@@ -667,11 +667,25 @@ extension CollectionViewDelegateFlowLayout : UICollectionViewDelegateFlowLayout 
 
 extension CollectionViewDelegate : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        unowned let weakSelf =  self
-        makeIdForInAppBigBy(indexPath: indexPath)
-        makeIdForInAppBy(indexPath: indexPath)
-        self.presentDonationAlertVC(from: weakSelf, with: stringIdForInAppBig)
-        (tabBarController as! CustomTabBarViewController).changeViewVisibility(isHidden: true)
+        switch indexPath.row {
+        case 0:
+            unowned let weakSelf =  self
+            makeIdForInAppBigBy(indexPath: indexPath)
+            makeIdForInAppBy(indexPath: indexPath)
+            self.presentDonationAlertVC(from: weakSelf, with: stringIdForInAppBig)
+            (tabBarController as! CustomTabBarViewController).changeViewVisibility(isHidden: true)
+            break
+            
+        case 1:
+            let storyboard = UIStoryboard(name: "Charts", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "CommonChartsID") as! CommonChartsViewController
+            self.present(vc, animated: true, completion: nil)
+
+            break
+            
+        default: break
+        }
+        
         logAnalytics(indexPath: indexPath)
     }
     
